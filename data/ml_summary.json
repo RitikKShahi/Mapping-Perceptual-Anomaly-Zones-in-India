@@ -1,0 +1,84 @@
+{
+  "n_clusters": 6,
+  "silhouette_score": 0.4906,
+  "rf_accuracy": 0.9998,
+  "pca_explained_variance": [
+    0.38,
+    0.2854
+  ],
+  "morans_i": {
+    "I": 0.60499,
+    "E_I": -0.000333,
+    "z_score": 66.3928,
+    "p_value": 0.0,
+    "significant": true
+  },
+  "cluster_profiles": [
+    {
+      "cluster": 0,
+      "name": "Dark Wilderness",
+      "count": 28234,
+      "mean_score": 0.4656,
+      "mean_darkness": 0.9841,
+      "mean_enclosure": 0.0522,
+      "mean_acoustics": 0.0403,
+      "mean_visibility": 0.7335,
+      "dominant_feature": "darkness"
+    },
+    {
+      "cluster": 1,
+      "name": "Enclosed Valley",
+      "count": 15402,
+      "mean_score": 0.1767,
+      "mean_darkness": 0.1018,
+      "mean_enclosure": 0.0737,
+      "mean_acoustics": 0.0431,
+      "mean_visibility": 0.5774,
+      "dominant_feature": "darkness"
+    },
+    {
+      "cluster": 2,
+      "name": "Acoustic Canyon",
+      "count": 7660,
+      "mean_score": 0.4525,
+      "mean_darkness": 0.1172,
+      "mean_enclosure": 0.918,
+      "mean_acoustics": 0.0169,
+      "mean_visibility": 0.6927,
+      "dominant_feature": "enclosure"
+    },
+    {
+      "cluster": 3,
+      "name": "Misty Lowland",
+      "count": 22087,
+      "mean_score": 0.7277,
+      "mean_darkness": 0.9843,
+      "mean_enclosure": 0.9524,
+      "mean_acoustics": 0.0131,
+      "mean_visibility": 0.7205,
+      "dominant_feature": "darkness"
+    },
+    {
+      "cluster": 4,
+      "name": "Shadow Plateau",
+      "count": 9090,
+      "mean_score": 0.5208,
+      "mean_darkness": 0.9384,
+      "mean_enclosure": 0.0737,
+      "mean_acoustics": 0.2157,
+      "mean_visibility": 0.8704,
+      "dominant_feature": "darkness"
+    },
+    {
+      "cluster": 5,
+      "name": "Twilight Basin",
+      "count": 7527,
+      "mean_score": 0.4658,
+      "mean_darkness": 0.9598,
+      "mean_enclosure": 0.3967,
+      "mean_acoustics": 0.0167,
+      "mean_visibility": 0.2777,
+      "dominant_feature": "darkness"
+    }
+  ]
+}
