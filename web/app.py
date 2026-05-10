@@ -662,14 +662,14 @@ with tab3:
 
             # Static cluster map with India boundary
             fig2, ax2 = plt.subplots(figsize=(9, 9), dpi=120)
-            fig2.patch.set_facecolor("#0e1117")
-            ax2.set_facecolor("#0e1117")
+            fig2.patch.set_facecolor("#ffffff")
+            ax2.set_facecolor("#ffffff")
 
             # Draw India boundary fill
             if india_poly_coords:
                 for coords in india_poly_coords:
                     poly = MplPolygon(coords[:, :2], closed=True,
-                                     facecolor="#1a1a2e", edgecolor="#555", linewidth=1.0)
+                                     facecolor="#000000", edgecolor="#555555", linewidth=1.0)
                     ax2.add_patch(poly)
 
             # Sample + filter to India
@@ -692,20 +692,20 @@ with tab3:
             # Redraw boundary on top
             if india_poly_coords:
                 for coords in india_poly_coords:
-                    ax2.plot(coords[:, 0], coords[:, 1], color="#777", linewidth=0.8, zorder=3)
+                    ax2.plot(coords[:, 0], coords[:, 1], color="#333333", linewidth=0.8, zorder=3)
 
             ax2.set_xlim(67.5, 98.0)
             ax2.set_ylim(6.0, 37.5)
             ax2.set_aspect("equal")
-            ax2.tick_params(colors="#666", labelsize=7)
+            ax2.tick_params(colors="#333333", labelsize=7)
             for spine in ax2.spines.values():
-                spine.set_color("#333")
+                spine.set_color("#cccccc")
             ax2.legend(loc="lower left", fontsize=7, framealpha=0.7,
-                       facecolor="#1a1a2e", edgecolor="#444", labelcolor="#ccc")
+                       facecolor="#ffffff", edgecolor="#cccccc", labelcolor="#333333")
             ax2.set_title("K-Means Anomaly Archetype Clusters",
-                          color="#eee", fontsize=12, fontweight="bold", pad=10)
-            ax2.set_xlabel("Longitude (°E)", color="#888", fontsize=8)
-            ax2.set_ylabel("Latitude (°N)", color="#888", fontsize=8)
+                          color="#111111", fontsize=12, fontweight="bold", pad=10)
+            ax2.set_xlabel("Longitude (°E)", color="#555555", fontsize=8)
+            ax2.set_ylabel("Latitude (°N)", color="#555555", fontsize=8)
 
             plt.tight_layout()
             st.pyplot(fig2, width="stretch")
@@ -759,8 +759,8 @@ with tab3:
                 pca_sample = ml_df.sample(n=min(3000, len(ml_df)), random_state=42).copy()
 
                 fig3, ax3 = plt.subplots(figsize=(8, 6), dpi=120)
-                fig3.patch.set_facecolor("#0e1117")
-                ax3.set_facecolor("#0e1117")
+                fig3.patch.set_facecolor("#ffffff")
+                ax3.set_facecolor("#ffffff")
 
                 profiles = ml_summ["cluster_profiles"]
                 name_map = {p["cluster"]: p["name"] for p in profiles}
@@ -773,13 +773,13 @@ with tab3:
                                 c=ccolor, s=6, alpha=0.5, label=label, edgecolors="none")
 
                 ax3.legend(loc="best", fontsize=7, framealpha=0.7,
-                           facecolor="#1a1a2e", edgecolor="#444", labelcolor="#ccc")
-                ax3.set_xlabel("PC1", color="#aaa", fontsize=9)
-                ax3.set_ylabel("PC2", color="#aaa", fontsize=9)
-                ax3.set_title("PCA 2D Projection by Cluster", color="#eee", fontsize=11, fontweight="bold")
-                ax3.tick_params(colors="#666", labelsize=7)
+                           facecolor="#ffffff", edgecolor="#cccccc", labelcolor="#333333")
+                ax3.set_xlabel("PC1", color="#555555", fontsize=9)
+                ax3.set_ylabel("PC2", color="#555555", fontsize=9)
+                ax3.set_title("PCA 2D Projection by Cluster", color="#111111", fontsize=11, fontweight="bold")
+                ax3.tick_params(colors="#333333", labelsize=7)
                 for spine in ax3.spines.values():
-                    spine.set_color("#333")
+                    spine.set_color("#cccccc")
 
                 plt.tight_layout()
                 st.pyplot(fig3, width="stretch")
